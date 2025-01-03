@@ -33,7 +33,7 @@ class _TiltAngleScreenState extends State<TiltAngleScreen> {
   void initState() {
     super.initState();
 
-    c.listen((AccelerometerEvent event) {
+    accelerometerEvents.listen((AccelerometerEvent event) {
       setState(() {
         _angleX = _calculateAngle(event.x, event.y);
         _angleY = _calculateAngle(event.y, event.z);
